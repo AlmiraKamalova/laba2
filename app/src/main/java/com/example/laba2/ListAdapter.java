@@ -19,9 +19,6 @@ public class ListAdapter extends ArrayAdapter<User> {
 
         super(context,R.layout.list_item,userArrayList);
     }
-
-
-
     @NonNull
     @Override
     public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
@@ -31,7 +28,6 @@ public class ListAdapter extends ArrayAdapter<User> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent, false);
 
         }
-
         ImageView imageView = convertView.findViewById(R.id.profile_pic);
         TextView poroda = convertView.findViewById(R.id.poroda);
         TextView  group = convertView.findViewById(R.id.group);
@@ -41,7 +37,6 @@ public class ListAdapter extends ArrayAdapter<User> {
         poroda.setText(user.poroda);
         group.setText(user.group);
         color.setText(user.color);
-
        return convertView;
     }
 
